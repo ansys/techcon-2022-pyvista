@@ -1,30 +1,30 @@
-## Ansys LaTeX Beamer Slide Template
+## Ansys Techcon 2022 - PyVista: Visualizing CAE and Results with Python
 
-This is a [LaTeX](https://www.latex-project.org/) [beamer](https://ctan.org/pkg/beamer?lang=en) template you can use to create an Ansys style presentations without the use of PowerPoint. It follows the Ansys template as much as possible including:
+This repository contains the content for the PyVista - Visualizing CAE and Results with Python presentation.
 
-- Style
-- Font
-- Organization
-- Theme
+These slides were generated using the [Ansys Beamer Template](https://github.com/ansys/beamer-template)
 
-Please feel free to point out any problems with this template by opening an [issue](https://github.com/ansys/beamer-template/issues).
+Please visit the [PyVista Tutorial](https://tutorial.pyvista.org/) for more details
 
-### Preview
+### Comments or Suggestions
 
-Visit [sample.pdf](https://ubiquitous-spoon-7c23a783.pages.github.io/sample.pdf) to see the full generated presentation.
-
-[![sample.pdf](figures/title.png)](https://ubiquitous-spoon-7c23a783.pages.github.io/sample.pdf)
+Please feel free to point out any problems with this presentation by opening an [issue](https://github.com/ansys/techcon-2022-pyvista/issues).
 
 
-### Installation
+### View the Presentation
 
-Due to the usage of ttf fonts, this template requires [LuaTeX](https://www.luatex.org/). Also requires the ``inkscape`` to read svg files.
+Visit [techcon_2022_pyvista.pdf](https://ansys.github.io/techcon-2022-pyvista/techcon_2022_pyvista.pdf) to see the full generated presentation.
+
+
+## Build it Yourself
+
+Due to the usage of ttf fonts, this template requires [LuaTeX](https://www.luatex.org/).
 
 On Linux (Debian) install with:
 
 ```
 sudo apt update
-sudo apt install -y latexmk texlive-luatex texlive-fonts-extra inkscape
+sudo apt install -y latexmk texlive-luatex texlive-fonts-extra
 ```
 
 On Windows, use a distribution like [MiKTeX](http://miktex.org/). See [Get LaTeX](https://www.latex-project.org/get/).
@@ -34,14 +34,14 @@ On Windows, use a distribution like [MiKTeX](http://miktex.org/). See [Get LaTeX
 
 Clone this repository with:
 ```
-git clone https://github.com/ansys/beamer-template/
-cd beamer-template
+git clone https://github.com/ansys/techcon-2022-pyvista
+cd techcon-2022-pyvista
 ```
 
 Build with:
 
 ```
-latexmk -pdflatex=lualatex -pdf sample.tex -interaction=nonstopmode -outdir=./build
+latexmk -pdflatex=lualatex -pdf *.tex -interaction=nonstopmode -outdir=./build --shell-escape
 ```
 
 Or simply:
@@ -49,4 +49,4 @@ Or simply:
 make
 ```
 
-This will output `sample.pdf` in the `build` directory. You can feel free to rename the main `sample.tex` file for your own presentation.
+This will output `techcon_2022_pyvista.pdf` in the `build` directory.
