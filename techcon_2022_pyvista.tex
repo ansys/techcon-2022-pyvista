@@ -235,10 +235,11 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\transitionframe{Getting Started}
 \section{Getting Started}
 
 \begin{frame}
-  \frametitle{APIs - Definition and Examples}
+  \frametitle{Getting Started}
   \tableofcontents[currentsection]
   \vspace{200pt}  %% force top tight
 \end{frame}
@@ -298,7 +299,17 @@ conda install -c conda-forge pyvista
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Examples}
+\transitionframe{Examples}
+\section{Examples}
+
+\begin{frame}
+  \frametitle{Examples}
+  \tableofcontents[currentsection]
+  \vspace{200pt}  %% force top tight
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Basic Plot}
 \begin{frame}
   \frametitle{Examples - Basic Plot}
 
@@ -319,7 +330,7 @@ conda install -c conda-forge pyvista
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Examples}
+\subsection{Basic Volumetric Plot}
 \begin{frame}
   \frametitle{Examples - Basic Volumetric Plot}
 
@@ -338,6 +349,76 @@ conda install -c conda-forge pyvista
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Filters}
+\begin{frame}
+  \frametitle{Examples - Filters}
+
+  \begin{center}
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \inputminted[fontsize=\footnotesize]{python}{code/filters.py}
+      \end{column}
+
+      \begin{column}{.5\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{figures/filters.png}
+      \end{column}
+    \end{columns}
+  \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Examples - Widgets}
+
+  \begin{center}
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \inputminted[fontsize=\footnotesize]{python}{code/widgets_ex.py}
+      \end{column}
+
+      \begin{column}{.5\textwidth}
+        \vspace{-25pt}
+        \centering
+        \includegraphics[width=1.0\textwidth]{figures/sphx_glr_d_multi-slider-widget_001}
+      \end{column}
+    \end{columns}
+  \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{PyInstaller and PyQT}
+\begin{frame}
+  \frametitle{Examples - PyInstaller and PyQT}
+
+  \vspace{-15pt}
+
+  \begin{center}
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \small
+        \begin{itemize}
+          \item Use PyInstaller and PyQT or PySide to create a standalone application.
+          \item Multi-platform. Build on the OS you intend to deploy.
+          \item Compatible with GitHub Actions and can be automated.
+          \item Deploy as using an installer like NSIS.
+        \end{itemize}
+        \vspace{5pt}
+        \inputminted[fontsize=\footnotesize]{bash}{code/pyinstaller.py}
+      \end{column}
+
+      \begin{column}{.5\textwidth}
+        %% \vspace{-25pt}
+        \centering
+        \includegraphics[width=1.0\textwidth]{figures/VesselVio.png}
+      \end{column}
+    \end{columns}
+  \end{center}
+
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
