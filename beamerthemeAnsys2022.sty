@@ -1,0 +1,278 @@
+%Copyright (c) <2015> <John T. Foster>
+
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+
+%The above copyright notice and this permission notice shall be included in
+%all copies or substantial portions of the Software.
+
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%THE SOFTWARE.
+
+% template adapted by Alex Kaszynski for Ansys presentations
+
+\mode<presentation>
+%% \setbeamersize{text margin left=2.25em,text margin right=2.25em} 
+
+%Requirements
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\graphicspath{{./anstheme_assets/}}
+%% \usepackage[scaled=0.90]{helvet}
+\usepackage{geometry}
+
+%% 16:9 ratio
+\usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter}
+
+%% As close to Calibri as we can get with open source
+%% \usepackage[default, osfigures]{carlito}
+\usepackage{fontspec}
+%% \setsansfont{Liberation Serif}
+\setsansfont[Path=./anstheme_assets/,
+    BoldItalicFont=calibriz.ttf,
+    BoldFont      =calibrib.ttf,
+    ItalicFont    =calibrii.ttf]{calibri.ttf}
+
+
+%The base themes we inherit from
+\usetheme[headheight=0.7cm,footheight=0cm]{boxes}                 
+\usecolortheme{default}       
+
+%Define Colors
+\definecolor{ANSYS@Gold}{RGB}{255, 183, 27}
+\definecolor{ANSYS@Bronze}{RGB}{200, 146, 17}
+\definecolor{ANSYS@Blue}{RGB}{57, 114, 161}
+
+%Define Smaller than tiny font
+\newcommand{\miniscule}{\@setfontsize\minisule{4.5}{5}}%
+
+%Define Quick Images
+\pgfdeclareimage[width=0.05\textwidth]{AnsysForwardSlash}{./anstheme_assets/ansys_forward_slash.png}
+\pgfdeclareimage[width=1.12\textwidth]{AnsysFooter}{./anstheme_assets/ansys_footer_line.png} 
+
+
+%Define Header/footer graphics, bars, distribution text, and page numbers
+\addheadbox{section in head/foot}{\raisebox{-3em}{\hspace{1.8em}{\pgfuseimage{AnsysForwardSlash}}}}
+%% long fat line at bottom ending with Ansys logo
+\addheadbox{section in head/foot}{\raisebox{-38.8em}{\hspace{-37.8em}{\pgfuseimage{AnsysFooter}}}}
+\addfootbox{section in head/foot}{\raisebox{0.3em}{\hspace{2.5em}\scalebox{0.9}
+{\insertframenumber}}}
+
+
+
+%New Commands
+\def\distribution#1{\gdef\@distribution{#1}}
+\def\@distribution{\latex@error{No \noexpand\distribution given}\@ehc}
+
+\def\subheadleft#1{\gdef\insertsubheadleft{#1}}	
+\def\insertsubheadleft{\latex@error{No \noexpand\subheadleft given}\@ehc}
+
+\def\subtextleft#1{\gdef\insertsubtextleft{#1}}
+\def\insertsubtextleft{\latex@error{No \noexpand\subtextleft given}\@ehc}
+
+\def\subheadright#1{\gdef\insertsubheadright{#1}}
+\def\insertsubheadright{\latex@error{No \noexpand\subheadright given}\@ehc}
+
+\def\subtextright#1{\gdef\insertsubtextright{#1}}
+\def\insertsubtextright{\latex@error{No \noexpand\subtextright given}\@ehc}
+
+
+%Theme settings
+%Table of Contents
+%http://mirror.hmc.edu/ctan/macros/latex/contrib/beamer/doc/beameruserguide.pdf
+%Section 10.5
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamercolor{section in toc}{fg=black}
+\setbeamertemplate{section in toc shaded}[default][30]
+%% \setbeamerfont{subsection in toc}{size=\small}
+
+%Title page
+
+%% \setbeamertemplate{title}[default][left]
+\setbeamerfont{title page}{series=\mdseries}
+\setbeamercolor{title page}{fg=black}
+\setbeamerfont{title}{series=\bfseries,size=\large}
+\setbeamercolor{title}{fg=white}
+\setbeamerfont{subtitle}{series=\bfseries}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamerfont{author}{series=\bfseries,size=\small}
+\setbeamercolor{author}{fg=white}
+\setbeamerfont{institute}{series=\bfseries,size=\small}
+\setbeamercolor{institute}{fg=white}
+\setbeamerfont{date}{size=\small}
+\setbeamercolor{date}{fg=gray}
+\setbeamerfont{subhead}{series=\bfseries,shape=\scshape}
+\setbeamercolor{subhead}{fg=white}
+\setbeamerfont{section}{series=\bfseries,size=\huge}
+\setbeamercolor{section}{fg=black}
+
+
+
+%Color palette
+\setbeamercolor{structure}{fg=black}
+\setbeamerfont{structure}{series=\mdseries,shape=\upshape}
+\setbeamercolor*{palette primary}{use=structure,bg=white, fg=black}
+\setbeamercolor*{palette secondary}{use=structure,bg=white, fg=black}
+\setbeamercolor*{palette tertiary}{bg=white, fg=black}
+\setbeamercolor*{palette quaternary}{bg=white, fg=black}
+
+%Frames
+\setbeamertemplate{frametitle}{
+	\vspace{-11pt}
+	\hspace{-1pt}
+	\insertframetitle\\
+	\hspace{-1pt}
+	\footnotesize{\vspace{-5pt}\insertframesubtitle}
+	\vspace{-1pt}}
+\setbeamercolor*{frametitle}{use=structure,fg=black}
+\setbeamerfont*{frametitle}{size=\large,series=\bfseries}
+\setbeamercolor*{framesubtitle}{fg=black}
+
+
+
+%Block formatting
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{itemize item}{\boldmath$\cdot$}
+\setbeamertemplate{itemize subitem}{\boldmath$\cdot$}
+\setbeamertemplate{itemize subsubitem}{\boldmath$\cdot$}
+
+\setbeamercolor{block title}{fg=black,bg=gray!40}
+\setbeamercolor{block body}{fg=black,bg=gray!10}
+\setbeamercolor{block title alerted}{fg=red,bg=gray!40}
+\setbeamercolor{block body alerted}{fg=black,bg=gray!10}
+\setbeamercolor{block title example}{fg=black,bg=ANSYS@Gold}
+\setbeamercolor{block body example}{fg=black,bg=ANSYS@Gold!5}
+\setbeamerfont{block title}{series=\bfseries}
+
+
+%Text
+\setbeamercolor{normal text}{bg=white,fg=black}
+\setbeamercolor{alerted text}{fg=black}
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+\setbeamercolor{subitem}{fg=black}
+
+
+
+%Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%Note page settings
+\setbeamerfont{note page}{size=\scriptsize}
+\setbeamertemplate{note page}{\insertnote\par}
+
+%Setup title page Formatting
+\defbeamertemplate*{title page}{customized}[1][]{%
+\par
+\vspace{50pt}
+ {\centering
+  \usebeamerfont{title page}\usebeamercolor[fg]{title page}
+  \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \usebeamerfont{title page}\usebeamercolor[fg]{title page}
+  }
+ \vspace{30pt}
+  {\centering
+  \usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par 
+  \vspace{5pt}
+  \usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute \hspace{12pt}
+  \usebeamerfont{date}\usebeamercolor[fg]{institute}\insertdate\\
+  }
+}
+
+
+%Subtext for MiniPage
+\newcommand{\insertsubleft}{
+  \usebeamerfont{subhead}\usebeamercolor[fg]{subhead}\insertsubheadleft\\
+   \usebeamerfont{structure}\usebeamercolor[fg]{structure}\insertsubtextleft
+}
+
+\newcommand{\insertsubright}{
+  \usebeamerfont{subhead}\usebeamercolor[fg]{subhead}\insertsubheadright\\
+   \usebeamerfont{structure}\usebeamercolor[fg]{structure}\insertsubtextright
+}
+
+\newcommand{\insertsubpage}{
+\vspace{-10pt}
+  \begin{minipage}[t]{0.45\textwidth}
+  	\insertsubleft
+  \end{minipage}    ~~~~~~~~
+  \begin{minipage}[t]{0.45\textwidth}
+  	\insertsubright
+  \end{minipage}
+}
+
+\newcommand{\insertsubnohead}{
+\vspace{-10pt}
+  \begin{minipage}[t]{0.45\textwidth}
+  	\usebeamerfont{subhead}\usebeamerfont{structure}\usebeamercolor[fg]{structure}\insertsubtextleft
+  \end{minipage}    ~~~~~~~~
+  \begin{minipage}[t]{0.45\textwidth}
+   	\usebeamerfont{subhead}\usebeamerfont{structure}\usebeamercolor[fg]{structure}\insertsubtextright
+  \end{minipage}
+}
+
+
+%Create Section Slide
+\newcommand{\insertsectionTMP}{\usebeamerfont{section}\usebeamercolor[fg]{section}\insertsectionhead}
+
+
+\newcommand{\transitionframe}[1]{{
+    % simply copied from Ansys template pptx
+    \setbeamertemplate{headline}{\includegraphics[width = \paperwidth]{./anstheme_assets/transition_slide.pdf}}
+
+    % must have a frame
+    \setbeamertemplate{footline}{}  % remove slide numbering
+    \begin{frame}[c]
+      \begin{flushright}
+        \Large\textbf{#1}
+      \end{flushright}
+    \end{frame}
+  }
+}
+
+%lastpage macro
+\newcommand{\lastframe}{{%
+    % simply copied from Ansys template pptx
+    \setbeamertemplate{headline}{\includegraphics[width = \paperwidth]{./anstheme_assets/end_slide.pdf}}
+
+    % must have a frame
+    \setbeamertemplate{footline}{}  % remove slide numbering
+    \begin{frame}[c]
+    \end{frame}
+  }
+}
+
+%Create TitleFrame Macro
+\newcommand{\titleframe}{{
+ \setbeamertemplate{headline}{\includegraphics[width = \paperwidth]{./anstheme_assets/ansys_title_template}}
+\setbeamertemplate{footline}{
+  \leavevmode
+  \hbox{}
+
+}
+
+\frame[c]{%
+\vspace{40pt}
+\maketitle%
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+\vspace*{\baselineskip}
+\rule{11cm}{0.4pt}\\
+\vspace{-5pt}
+\centering
+\scalebox{0.25}{}
+}
+}}
+
+\setbeamertemplate{title page}[default][left]
+
+\mode<all>

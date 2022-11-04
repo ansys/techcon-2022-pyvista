@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="terminal" baseProfile="full" viewBox="0 0 640 410" width="640" version="1.1">
+    <defs>
+        <termtosvg:template_settings xmlns:termtosvg="https://github.com/nbedos/termtosvg">
+            <termtosvg:screen_geometry columns="80" rows="24"/>
+            <termtosvg:animation type="css"/>
+        </termtosvg:template_settings>
+        <style type="text/css" id="generated-style"><![CDATA[#screen {
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+        }
+    ]]></style>
+        <style type="text/css" id="user-style">
+            .foreground {fill: #dcdfe4;}
+            .background {fill: #282c34;}
+            .color0 {fill: #282c34;}
+            .color1 {fill: #e06c75;}
+            .color2 {fill: #98c379;}
+            .color3 {fill: #e5c07b;}
+            .color4 {fill: #61afef;}
+            .color5 {fill: #c678dd;}
+            .color6 {fill: #56b6c2;}
+            .color7 {fill: #dcdfe4;}
+            .color8 {fill: #282c34;}
+            .color9 {fill: #e06c75;}
+            .color10 {fill: #98c379;}
+            .color11 {fill: #e5c07b;}
+            .color12 {fill: #61afef;}
+            .color13 {fill: #c678dd;}
+            .color14 {fill: #56b6c2;}
+            .color15 {fill: #dcdfe4;}
+
+            @page {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </defs>
+    <svg id="screen" width="640" height="408" viewBox="0 0 640 408" preserveAspectRatio="xMidYMin slice"><rect class="background" height="100%" width="100%" x="0" y="0"/><defs><g id="g1"><text x="0" textLength="120" class="foreground">$ this is a tes</text><text x="120" textLength="8" class="background"> </text></g></defs><g><rect x="120" y="0" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="0"/></g></svg>
+</svg>
