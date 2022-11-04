@@ -77,7 +77,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Title Slide
 
-\title{PyVista – Visualizing CAE and Results with Python}
+\title{PyVista \\
+  Visualizing CAE Results with Python}
 %% \subtitle{}
 \author{Alex Kaszynski}
 \date{\today}
@@ -170,7 +171,6 @@
     \end{column}
   \end{columns}
 
-
 \end{frame}
 
 
@@ -187,12 +187,14 @@
     \begin{column}{.5\textwidth}
       \vspace{-15pt}
       \inputminted[fontsize=\footnotesize]{python}{code/pv_example.py}
-      \vspace{-5pt}
-      \includegraphics[width=\textwidth]{figures/pv_example.png}
+      \begin{center}
+        \includegraphics[width=0.9\textwidth]{figures/pv_example.png}
+        \end{center}
     \end{column}
   \end{columns}
 
 \end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Where is it already used?}
@@ -242,6 +244,7 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Installation}
 \begin{frame}[fragile=singleslide]
   \frametitle{Installation}
   \vspace{-10pt}
@@ -274,6 +277,68 @@ conda install -c conda-forge pyvista
   \href{https://asciinema.org/a/507562}{\includegraphics[width=0.76\textwidth]{figures/install_pyvista.png}}
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tutorial}
+\begin{frame}
+  \frametitle{Tutorial}
+
+  The \href{https://tutorial.pyvista.org}{PyVista Tutorial} contains a variety of lessons to help you get started with PyVista. The first lessons include:
+
+  \begin{itemize}
+  \item Introduction - Using PyVista for 3D Visualization within Python.
+  \item Reading and plotting 3D data using the PyVista module and external files.
+  \item Learn the basics of the PyVista data types and how to open common 3D file formats to visualize the data in 3D.
+  \item Demonstrate many features of the PyVista plotting API to create compelling 3D visualizations and touch on animations.
+  \item Demonstrate the PyVista filters API to perform mesh analysis and alteration.
+  \end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Examples}
+\begin{frame}
+  \frametitle{Examples - Basic Plot}
+
+  \begin{center}
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \inputminted[fontsize=\footnotesize]{python}{code/basic_usage.py}
+      \end{column}
+
+      \begin{column}{.5\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{figures/basic_usage.png}
+      \end{column}
+    \end{columns}
+  \end{center}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Examples}
+\begin{frame}
+  \frametitle{Examples - Basic Volumetric Plot}
+
+  \begin{center}
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \inputminted[fontsize=\footnotesize]{python}{code/basic_usage2.py}
+      \end{column}
+
+      \begin{column}{.5\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{figures/basic_usage2.png}
+      \end{column}
+    \end{columns}
+  \end{center}
+
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lastframe{}
