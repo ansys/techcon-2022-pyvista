@@ -15,6 +15,7 @@ Please feel free to point out any problems with this presentation by opening an 
 
 Visit [techcon_2022_pyvista.pdf](https://ansys.github.io/techcon-2022-pyvista/techcon_2022_pyvista.pdf) to see the full generated presentation.
 
+[![techcon_2022_pyvista.pdf](figures/for_readme.png)](https://ansys.github.io/techcon-2022-pyvista/techcon_2022_pyvista.pdf)
 
 ## Build it Yourself
 
