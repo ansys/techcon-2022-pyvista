@@ -135,6 +135,37 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{PyVista - Popularity and Growth}
+
+  \vspace{-15pt}
+
+  \begin{center}
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \small
+        \begin{itemize}
+          \item Already the most popular 3d visualization library on PyPI.
+          \item Designed not just for visualization, but for scientific
+            visualization focused on data post-processing, file IO, and
+            interoperability with other libraries.
+        \end{itemize}
+        \vspace{10pt}
+        \href{https://pyviz.org/tools.html}{\includegraphics[width=1.1\textwidth]{figures/overview_sciviz.png}}
+      \end{column}
+
+      \begin{column}{.5\textwidth}
+        \vspace{-5pt}
+        \centering
+        \includegraphics[width=0.9\textwidth]{figures/overview-graph.png}
+      \end{column}
+    \end{columns}
+  \end{center}  
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Where is it already used?}
 \begin{frame}
   \frametitle{PyVista - Current Usage}
@@ -282,24 +313,6 @@ conda install -c conda-forge pyvista
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Tutorial}
-\begin{frame}
-  \frametitle{Tutorial}
-
-  The \href{https://tutorial.pyvista.org}{PyVista Tutorial} contains a variety of lessons to help you get started with PyVista. The first lessons include:
-
-  \begin{itemize}
-  \item Introduction - Using PyVista for 3D Visualization within Python.
-  \item Reading and plotting 3D data using the PyVista module and external files.
-  \item Learn the basics of the PyVista data types and how to open common 3D file formats to visualize the data in 3D.
-  \item Demonstrate many features of the PyVista plotting API to create compelling 3D visualizations and touch on animations.
-  \item Demonstrate the PyVista filters API to perform mesh analysis and alteration.
-  \end{itemize}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \transitionframe{Examples}
 \section{Examples}
 
@@ -354,6 +367,7 @@ conda install -c conda-forge pyvista
 \subsection{Filters}
 \begin{frame}
   \frametitle{Examples - Filters}
+  \vspace{-10pt}
 
   \begin{center}
     \begin{columns}[T]
@@ -421,6 +435,53 @@ conda install -c conda-forge pyvista
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Examples - Documentation with Sphinx}
+
+  \vspace{-15pt}
+
+  \begin{center}
+    \begin{columns}[T]
+      \begin{column}{.5\textwidth}
+        \small
+        \begin{itemize}
+          \item PyVista supports the Sphinx documentation generator.
+          \item Allows you to generate static and interactive documentation.
+          \item Place code snippets directly in the documentation as examples.
+        \end{itemize}
+        \vspace{5pt}
+        \inputminted[fontsize=\footnotesize]{bash}{code/sphinx_conf.py}
+      \end{column}
+
+      \begin{column}{.5\textwidth}
+        \vspace{-5pt}
+        \centering
+        \href{https://docs.pyvista.org/}{\includegraphics[width=0.9\textwidth]{figures/sphinx.png}}
+      \end{column}
+    \end{columns}
+  \end{center}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tutorial}
+\begin{frame}
+  \frametitle{Tutorial}
+
+  The \href{https://tutorial.pyvista.org}{PyVista Tutorial} contains a variety of lessons to help you get started with PyVista. The first lessons include:
+
+  \begin{itemize}
+  \item Introduction - Using PyVista for 3D Visualization within Python.
+  \item Reading and plotting 3D data using the PyVista module and external files.
+  \item Learn the basics of the PyVista data types and how to open common 3D file formats to visualize the data in 3D.
+  \item Demonstrate many features of the PyVista plotting API to create compelling 3D visualizations and touch on animations.
+  \item Demonstrate the PyVista filters API to perform mesh analysis and alteration.
+  \end{itemize}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lastframe{}
